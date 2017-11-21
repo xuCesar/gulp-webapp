@@ -215,10 +215,10 @@ gulp.task('build', ['clean'], () => {
 });
 
 //不压缩css,js,html，及重命名
-gulp.task('maxBuildSon', ['lint', 'maxhtml', 'imagesCopy', 'fonts', 'extras'], () => {
+gulp.task('minBuildSon', ['lint', 'maxhtml', 'imagesCopy', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({title: 'build', gzip: true}));
 });
 
-gulp.task('maxbuild', ['clean'], () => {
-  gulp.start('maxBuildSon');
+gulp.task('minbuild', ['clean'], () => {
+  gulp.start('minBuildSon');
 });
