@@ -1,0 +1,75 @@
+//**
+// Other Useful Reusable Styles
+//**
+
+* {
+  box-sizing: border-box !important;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.clear {
+  clear: both;
+}
+
+.float-r {
+  float: right;
+}
+
+.float-l {
+  float: left;
+}
+
+.list-none {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.align-middle {
+  vertical-align: middle;
+}
+
+hr {
+  border: 0;
+  border-bottom: 1px solid #ddd;
+  margin: $padding 0;
+}
+
+.subtle {
+  color: $subtle-color;
+}
+
+.relative {
+  position: relative;
+}
+
+.table-full{
+  display: table;
+  width: 100%;
+  height: 100%;
+  .td-m{
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    text-align: center;
+  }
+}
+
+.ie_a {
+  position:absolute;
+  background:#fff;
+  opacity:0;
+  filter:alpha(opacity=0);
+}

@@ -1,0 +1,47 @@
+//animated default
+.animated{
+  animation-duration: .6s;
+  transform: translate3d(0, 0, 0);
+}
+
+
+@for $i from 0 through 15{
+  .delay#{$i}{
+    animation-delay: $i*0.2s;
+  }
+}
+
+@for $i from 0 through 15{
+  .time#{$i}{
+    animation-duration: $i*0.2s;
+  }
+}
+
+.origin-tc{
+  transform-origin:top center;
+}
+.origin-rb{
+  transform-origin:right bottom;
+}
+.origin-lb{
+  transform-origin:left center;
+}
+.origin-cb{
+  transform-origin:center bottom;
+}
+.origin-cc{
+  transform-origin:center center;
+}
+
+.iteration {
+  animation-iteration-count: infinite;
+}
+.ease-in{
+  animation-timing-function: ease-in;
+}
+.ease-out{
+  animation-timing-function:ease-out;
+}
+
+
+// animate css

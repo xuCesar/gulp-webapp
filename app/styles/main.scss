@@ -1,0 +1,24 @@
+// Reset default browser styles using Normalize
+@import "base/normalize";
+
+// Set variables and reusable mixins
+@import "base/config";
+@import "base/mixins";
+
+// Import reusable modules
+@import "components/media";
+//@import "components/buttons";
+//@import "components/forms";
+//@import "components/nav";
+@import "components/animate";
+@import "components/jsclass";
+@import "components/other";
+
+
+// Specific project styles, add any section specific sass modules here
+@import "pages/home";
+@import "pages/slide0";
+@import "pages/slide1";
+
+// Additional styles to think about
+@import "base/responsive";

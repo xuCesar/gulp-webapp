@@ -1,0 +1,91 @@
+//**
+// Homepage
+//**
+
+body {
+  font-family: $base-font-family;
+  font-size: 100%;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+.u-bg{
+  position: relative;
+  -webkit-transform-origin: top center;
+  -ms-transform-origin: top center;
+  transform-origin: top center;
+  max-width: $width+px;
+  margin: 0 auto;
+}
+
+.swiper0{
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-container{
+  height: 100%;
+}
+
+.logo{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  width: 200/$width*100%;
+}
+
+.warp{
+  position: relative;
+  height: 100%;
+  max-width: $width+px;
+  margin: 0 auto;
+}
+
+.share-default{
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  top: -1px;
+}
+
+.horizontal-tip {
+  position: fixed;
+  z-index: 120;
+  width: 100%;
+  height: 100%;
+  background-color: #303030;
+  font-size: 4.5em;
+  color: white;
+  top: 0;
+  left: 0;
+}
+@media all and (orientation:portrait) {
+  .horizontal-tip {
+    display: none;
+  }
+}
+
+@media screen and (max-aspect-ratio: 13/9) {
+  .horizontal-tip {
+    display: none;
+  }
+}
+
+.popup{
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color:rgba(0,0,0,.8);
+  z-index: 120;
+}

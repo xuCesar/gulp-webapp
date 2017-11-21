@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-cn">
+   <head>
+      <meta charset="utf-8">
+      <title>gulp webapp</title>
+      <meta name="description" content="">
+      <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0, user-scalable=no"/>
+      <meta name="format-detection" content="telephone=no" />
+
+      <!-- build:css styles/loading.css -->
+      <!-- <link rel="stylesheet" href="styles/loading.css"/> -->
+      <!-- endbuild --> 
+      
+      <!-- build:js scripts/init.js -->
+      <script src="script/init.js"></script>
+      <script src="script/preloadjs-0.6.2.min.js"></script>
+      <script src="script/preloader.js"></script>
+      <!-- endbuild -->
+
+      <link rel="shortcut icon" href="/favicon.ico">
+      <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+      <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+
+      <!-- build:css styles/main.css -->
+         <!-- bower:css -->
+         <link rel="stylesheet" href="/bower_components/Swiper/dist/css/swiper.css" />
+         <link rel="stylesheet" href="/bower_components/animate.css/animate.css" />
+         <!-- endbower -->
+      <link rel="stylesheet" href="styles/main.css">
+      <!-- endbuild -->
+
+  </head>
+  <body>
+
+  <!-- 默认分享图片-->
+  <div class="share-default">
+      <img src="images/share_img.jpg" alt=""/>
+  </div>
+
+  <!-- loading box-->
+  <div class="loading">
+    
+  </div>
+
+  <div class="warp" id="warp">
+      <div id="swiper0" class="swiper-container swiper0">
+          <div class="swiper-wrapper">
+
+              <!-- slide0-->
+              <div id="slide0" class="swiper-slide slide0">
+                <div class="u-bg">
+                  <div class="bg"><img src="images/body.jpg" alt=""/></div>
+                  <div class="btn0">
+                    <button class="btn btn-primary bounceInLeft animated time6 delay2 js-an">slide0-btn0</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- slide1-->
+              <div id="slide1" class="swiper-slide slide1">
+                <div class="u-bg">
+                  <div class="bg"><img src="images/body.jpg" alt=""/></div>
+                  <div class="btn0">
+                      <button class="btn btn-primary bounceIn animated time6 delay2 js-an">slide1-btn0</button>
+                  </div>
+
+                  <div class="btn1">
+                      <button class="btn bounceIn animated time6 delay2 js-an">slide1-btn0</button>
+                  </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- logo-->
+          <div class="logo"><img src="images/logo.jpg" alt=""/></div>
+      </div>
+
+      <!--横屏提示-->
+      <div class="horizontal-tip">
+          <div class="table-full">
+              <div class="td-m">
+                  <img src="images/horizontal_tip.png" alt="">
+              </div>
+          </div>
+      </div>
+  </div>
+
+  <!--微信接口
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>-->
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/Swiper/dist/js/swiper.jquery.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+
+
+    <!-- build:js scripts/main.js -->
+    <script src="script/base.js"></script>
+    <script src="script/data.js"></script>
+    <script src="script/interact.js"></script>
+    <script src="script/tracking_params.js"></script>
+    <script src="script/tracking.js"></script>
+    <script src="script/wechat.js"></script>
+    <script src="script/main.js"></script>
+    <!-- endbuild -->
+
+  </body>
+</html>

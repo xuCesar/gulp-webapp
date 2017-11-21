@@ -1,0 +1,72 @@
+//**
+// Project Mixins
+//**
+
+// Clear after floats
+@mixin clearfix {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
+
+// Apply clearfix to this classes by default
+.clearfix,
+.group {
+  @include clearfix;
+}
+
+
+
+//参数说明：列数，行数，帧数。例：雪碧图：3*4，共11帧。@include frames(3,4,11);
+
+@mixin frames($col,$row,$fps) {
+  @if $col == 1 and $row == 2 {//一列两行
+    from, 100% {
+      background-position: 0 0;
+    }
+
+    50% {
+      background-position: 0 100%;
+    }
+  }
+  @else if $col == 2 and $row == 1 {//一行两列
+    from, 100% {
+      background-position: 0 0;
+    }
+
+    50% {
+      background-position: 100% 0;
+    }
+  }
+  @else {
+    $f:0;
+    $fc:$col;
+    $fr:$row;
+    @if $col == 1 {//一列多行
+      $fc:2;
+    }
+    @if $row==1 {//一行多列
+      $fr:2;
+    }
+    @for $i from 0 through $row - 1{//因为有0，所以-1
+      @for $j from 0 through $col - 1{
+        @if $f<=($fps - 1) {
+          #{1/($fps - 1)*$f*100%}{
+            background-position:#{1/($fc - 1)*$j*100%} #{1/($fr - 1)*$i*100%};
+          }
+          $f:$f+1;
+        }
+      }
+    }
+  }
+}
